@@ -43,9 +43,9 @@ Web browser
   * Put
 
 Web/App server
-2. send HTTP response
 1. gives to a handler
   * generates a response of some form
+2. send HTTP response
 
 ### RESTful
 * Representation(Resource) E
@@ -70,8 +70,8 @@ Can call HTTP ops on any given resource
 ### Example of a Simple Service
 
 #### Consideration
-*Database
-*ids
-*inputs (what are they what format)
-*outputs (What are they what format)
-*Errors
+* Database
+* ids
+* inputs (what are they what format)
+* outputs (What are they what format)
+* Errors
