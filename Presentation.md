@@ -13,12 +13,12 @@
 * `merge`
 * `pull`
 * `push`
-* *.gitignore*
 * `status`
 * Topics of further interest
   * `log`
   * `remote`
   * `stash`
+  * *.gitignore*
 
 ## Workflow
 
@@ -70,26 +70,88 @@ Usage: `git init`
 Does the background work to start a git repository in the current directory which has no files currently tracked.
 
 ### `clone`
-Usage: `git clone *remote repository address*`
+Usage: git clone *remote_repository_address*
 
 Creates a new git repository in the current directory that is a copy of the remote repository given.
+
 **This will create another directory below your current directory for the repository.**
 
-## Branch
+## Branching
 
 ### `branch`
 Usage:
-1. `git branch`
+1. git branch
   * review the branches in the repository
-2. `git branch *new_branch_name*
+2. git branch *new_branch_name*
   * create a new branch
-3. `git branch -d *new_branch_name*
+3. git branch -d *new_branch_name*
   * delete the branch
+
+**Note:** Creating a branch does not change your current branch.
 
 ### `checkout`
 Usage:
-1. `git checkout *branch_name*`
+1. git checkout *branch_name*
   * Change to the branch
-2. `git checkout *commit*`
+2. git checkout *commit*
   * Move the current state of your copy to a particular commit
 
+## `add` and `commit`
+
+### `add`
+Usage: git add *file* ...
+* Add stage one or more files
+
+### `commit`
+Usage: git commit -m "Commit Message"
+* The -m flag is optional: without it the result drops you into the default editor to create the message
+
+## Merging
+
+### `merge`
+Usage:
+1. git merge *branch_name*
+  * Merges the named branch into the **current** branch
+
+### How to Resolve Conflicts
+1. Open a file with a conflict
+2. Find the conflict
+  * Conflicts are begun with <<<<<<< yours:name_of_file
+  * Differences are seperated by =======
+  * Conflicts end with >>>>>>> theirs:name_of_file
+3. Remove the markers and choose the lines of code which should not be in the result of the merge.
+4. Save the file.
+5. Repeat from 1 until there are not more conflicts.
+6. Add and commit the results of the merge.
+
+## Pull and Push
+
+### `pull`
+Usage: git pull [remote_repository] [branch_name]
+* The two parameters are optional if the defaults are set.
+
+### `push`
+Usage: git push [remote_repository]
+* This pushes all the updated branches to their equivalent in the remote repository.
+
+## Status
+
+This gives the status of files in the repository.
+
+Whether they are:
+* untracked
+* unmodified
+* modified, but changes are not staged
+* staged
+
+## Topics of further interest
+* `log`
+  * gives a history of commits
+  * particularly useful for finding the hash to checkout a particular commit
+* `remote`
+  * setup remote knowledge of remote repositories
+* `stash`
+  * Similar to the concept of shelving in other VCS
+* *.gitignore*
+  * Allows git to ignore untracked files without marking them as untracked.
+ 
