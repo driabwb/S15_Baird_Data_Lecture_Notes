@@ -39,8 +39,8 @@
   
 ### A basic workflow:
 1. Initialize the repository
-2. Add existing items to the repository: `git add`
-3. Commit the existing items to the repo with an appropriate: `git commit`
+2. Add existing items to the repository
+3. Commit the existing items to the repo with an appropriate
 4. Create a new branch
 5. Checkout the new branch
 6. Modify contents of the branch
