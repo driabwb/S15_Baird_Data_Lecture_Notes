@@ -1,0 +1,3 @@
+#! /bin/bash
+
+pandoc -f markdown -V theme:Warsaw --write beamer -o Presentation.pdf -s $1
