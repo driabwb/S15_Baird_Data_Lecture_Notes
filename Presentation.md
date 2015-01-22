@@ -1,9 +1,9 @@
 # Git Version Control System
-### David Baird
+
+---
 
 ## Topics
 
-* What is Git?
 * Workflow
 * Initilization
 * Branching
@@ -18,10 +18,20 @@
 
 ## Workflow
 
-|Untracked|Unmodified|Modified|Staged|*Remote*|
-|---------|----------|--------|------|--------|
-|These are not yet in the repo|These have not changed since the head|These have changed since the head|These are waiting to be commited|Files in at a remote repo's head|
-|`add` or *.gitignore*||`add`|`commit`|`pull`, `push`|
+* Untracked
+    * These are not yet in the repository
+    * `add` or *.gitignore*
+* Unmodified
+    * These have not changed since the current head
+* Modified
+    * These have change since the current head
+    * `add`
+* Staged
+    * These are waiting to be committed
+    * `commit`
+* *Remote*
+    * Files at a remote repository's head
+    * `pull` or `push`
 
 ---
 
@@ -39,7 +49,7 @@
 ## A basic workflow:
 1. Initialize the repository
 2. Add existing items to the repository
-3. Commit the existing items to the repo with an appropriate
+3. Commit the existing items to the repository with an appropriate
 4. Create a new branch
 5. Checkout the new branch
 6. Modify contents of the branch
@@ -50,21 +60,20 @@
 
 ## A basic workflow with a remote repository:
 
-1. Clone the previously existing repo
+1. Clone the previously existing repository
 2. Create a new branch
 3. Checkout the new branch
 4. Modify the contents of the branch
 5. Checkout the master branch
-6. Pull from the remote repo(s)
+6. Pull from the remote repository
 7. Merge from your branch to the master branch
-8. Pull from the remote repo(s)
-9. Push to the remote repo(s)
+8. Pull from the remote repository
+9. Push to the remote repository
 10. Repeat from step 2
 
 ---
 
 ## Initialization
-The beginnings of the repository.
 
 ### `init`
 Usage: 
@@ -79,7 +88,7 @@ Usage:
 Usage: 
 
 1. git clone *remote_repository_address*
-    *Creates a new git repository in the current directory that is a copy of the remote repository given.
+    * Creates a new git repository in the current directory that is a copy of the remote repository given.
 
 
 
@@ -193,7 +202,7 @@ Usage:
 * Files that you do not wish to be part of your repository
     * Typically generated artifacts such as executables
 * These files are typically handled via a file called *.gitignore*
-    * More than one ignore can be used in a single repo
+    * More than one ignore can be used in a single repository
 * This removes the unwanted files from being marked as untracked
 
 ---
@@ -212,7 +221,7 @@ Usage:
 
 ---
 
-## Topics of further interest
+## Topics of Further Interest
 * `log`
     * gives a history of commits
     * particularly useful for finding the hash to checkout a particular commit
@@ -220,5 +229,22 @@ Usage:
     * setup remote knowledge of remote repositories
 * `stash`
     * Similar to the concept of shelving in other VCS
+* `rebase`
+    * A method for changing how branches are related
+* `diff`
+    * Show differences between two states of the repository
 
+---
+
+## More Topics of Further Interest
+* `fetch`
+    * Get the changes but do not integrate
+* `reset`
+    * Move the current head
+* `tag`
+    * Mark git objects
+* `mv`
+    * Move a files location within a repository
+* `rm`
+    * Stop tracking the changes to a file
  
